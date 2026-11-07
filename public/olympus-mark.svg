@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Olympus Property emblem</title>
+  <desc id="desc">An original geometric emblem combining a mountain, doorway and rising sun.</desc>
+  <path fill="#17201c" d="M32 4 58 20v24L32 60 6 44V20L32 4Z"/>
+  <path fill="#f4f1e9" d="M16 42 32 15l16 27h-7L32 27 23 42h-7Z"/>
+  <path fill="#b59052" d="M27 42h10v14l-5 3-5-3V42Z"/>
+  <circle cx="32" cy="18" r="3.2" fill="#b59052"/>
+</svg>
