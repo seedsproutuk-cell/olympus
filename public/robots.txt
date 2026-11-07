@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /account/
+Disallow: /confirmation/
+Disallow: /*?*
+Sitemap: https://seedsprout-property.seedsprout-uk.chatgpt.site/sitemap.xml
