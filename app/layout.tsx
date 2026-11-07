@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SeedSprout Property: Property Done Right in Sheffield",
+  title: "Olympus Property: Property Done Right in Sheffield",
   description: "Find homes and commercial premises, offer a property for lease, or get practical property guidance. Property done right.",
   icons: {
     icon: "/favicon.svg",

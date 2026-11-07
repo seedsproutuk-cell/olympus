@@ -3,4 +3,4 @@ Allow: /
 Disallow: /account/
 Disallow: /confirmation/
 Disallow: /*?*
-Sitemap: https://seedsprout-property.seedsprout-uk.chatgpt.site/sitemap.xml
+Sitemap: https://olympus-property.seedsprout-uk.chatgpt.site/sitemap.xml
