@@ -152,22 +152,57 @@ const P: Record<string, Page> = {
   "/inspections/": {
     title: "Building Inspections for Landlords and Housing Providers",
     eyebrow: "Specialist inspections",
-    intro:
-      "Clear, evidence-led building checks for landlords, housing providers and block managers across the UK.",
+    intro: "Practical inspection and contractor support for landlords, housing providers and property managers across the UK.",
     sections: [
       {
         title: "Damp and mould surveys",
-        copy: "A written record of visible conditions, likely causes and practical next steps.",
+        copy: "Investigate visible damp, mould, moisture and the conditions contributing to the problem.",
+        link: ["View damp and mould inspections", "/inspections/damp-and-mould/"],
       },
       {
         title: "Fire door inspections",
-        copy: "Systematic checks for blocks of flats, HMOs and commercial buildings.",
+        copy: "Structured fire-door checks for blocks, HMOs, housing and commercial premises.",
+        link: ["View fire door inspections", "/inspections/fire-doors/"],
       },
       {
-        title: "Delivery status",
-        copy: "Bookings open when the delivery partner, scope and reporting process are confirmed.",
+        title: "Subcontractor services",
+        copy: "Access suitable trades and specialist subcontractors for defined property works.",
+        link: ["View subcontractor services", "/inspections/subcontractors/"],
       },
     ],
+  },
+  "/inspections/damp-and-mould/": {
+    title: "Damp and Mould Inspections",
+    eyebrow: "Investigate the cause",
+    intro: "A structured inspection of visible damp, mould and moisture conditions, followed by clear findings and practical next steps.",
+    sections: [
+      {title:"What we investigate",copy:"Visible mould growth, staining, condensation, ventilation, heating patterns, leaks, penetrating moisture and signs of rising damp."},
+      {title:"What you receive",copy:"A written record of observations, photographs where appropriate, likely contributing factors and recommended next actions."},
+      {title:"Who it is for",copy:"Landlords, letting agents, housing providers, block managers and occupiers who need a clearer picture of the problem."}
+    ],
+    form: "Request a damp and mould inspection",
+  },
+  "/inspections/fire-doors/": {
+    title: "Fire Door Inspections",
+    eyebrow: "Systematic door checks",
+    intro: "Consistent inspection of fire-door condition and visible defects for residential blocks, HMOs, housing and commercial buildings.",
+    sections: [
+      {title:"What we check",copy:"Door leaf and frame condition, gaps, seals, hinges, closers, glazing, signage and visible damage or alteration."},
+      {title:"Inspection record",copy:"Each inspected door is recorded with its location, observed condition and recommended remedial priority."},
+      {title:"Scope and limitations",copy:"The agreed scope is confirmed before attendance. An inspection supports—rather than replaces—the responsible person’s wider fire-safety duties."}
+    ],
+    form: "Request a fire door inspection",
+  },
+  "/inspections/subcontractors/": {
+    title: "Property Subcontractor Services",
+    eyebrow: "Delivery support",
+    intro: "Tell us what work is required and we can help identify suitable subcontractors for a clearly defined property project.",
+    sections: [
+      {title:"Trades and specialists",copy:"Support may include repairs, refurbishment, damp remediation, fire-door works, decorating and other defined property services."},
+      {title:"A clear brief",copy:"We record the property, required work, timescale, access arrangements and available evidence before introductions are made."},
+      {title:"Appointments and responsibility",copy:"Scope, competence, insurance, quotations and contracts must be checked and agreed directly before work begins."}
+    ],
+    form: "Subcontractor service enquiry",
   },
   "/learn/": {
     title: "Property Guides for Buyers, Investors and Landlords",
@@ -1432,6 +1467,7 @@ function OpportunityCategory({
     </>
   );
 }
+function Mentorship(){return <><Inner p={{title:"Property Mentorship",eyebrow:"One-to-one property guidance",intro:"Build your next property move with practical support shaped by more than 35 years of experience.",sections:[]}}/><section className="mentorship-intro"><div><span className="kicker">From your first property to your fifth</span><h2>Guidance built around the outcome you want.</h2></div><p>Whether you are preparing for your first acquisition or expanding an existing portfolio, the programme helps you build knowledge, assess real opportunities and move forward with a clear plan.</p></section><section className="mentorship-pillars">{[{n:"01",title:"One-to-one guidance",copy:"Work directly with experienced mentors on your goals, strategy, questions and next actions."},{n:"02",title:"Bring live deals",copy:"Review real opportunities, the numbers, risks, funding route, due diligence and negotiation before you decide."},{n:"03",title:"Source opportunities",copy:"Learn practical sourcing methods, including ways to structure and control opportunities without relying only on your own purchase capital."},{n:"04",title:"Acquisition support",copy:"Get guidance through search, analysis, offers, professional checks and the steps towards completing a suitable acquisition."},{n:"05",title:"Professional network",copy:"Understand when to involve solicitors, finance professionals, surveyors and other specialists, and what to ask them."},{n:"06",title:"Works and delivery",copy:"Plan refurbishment or property works with clearer briefs, budgets and access to relevant subcontractor support."}].map(x=><article key={x.n}><span>{x.n}</span><h3>{x.title}</h3><p>{x.copy}</p></article>)}</section><section className="mentorship-commitment"><div><span className="kicker">A holistic programme</span><h2>Knowledge, opportunities and accountable next steps.</h2></div><div><p>The programme is designed to stay close to your real objective—not simply deliver generic lessons. We help you strengthen your understanding, challenge assumptions and work through the practical stages of a property decision.</p><p>Property outcomes and finance are never guaranteed. Every acquisition remains subject to suitable opportunities, funding, professional advice and your own due diligence.</p></div></section><Form name="Join the mentorship programme" context="Property mentorship application"/></>}
 function Generic({ p }: { p: Page }) {
   return (
     <>
@@ -1540,32 +1576,7 @@ function App() {
       </>
     );
   } else if (path === "/glossary/") v = <Glossary />;
-  else if (path === "/mentorship/")
-    v = (
-      <Generic
-        p={{
-          title: "Property Mentorship",
-          eyebrow: "Decisions, not hype",
-          intro:
-            "A structured place to test your thinking and review live opportunities.",
-          sections: [
-            {
-              title: "Getting started",
-              copy: "Build grounded knowledge of strategy, numbers and due diligence.",
-            },
-            {
-              title: "Bring a live deal",
-              copy: "Separate facts from assumptions before committing.",
-              link: ["Bring a deal", "/mentorship/bring-a-deal/"],
-            },
-            {
-              title: "Availability",
-              copy: "Applications open when the mentor, format, dates and pricing are confirmed.",
-            },
-          ],
-        }}
-      />
-    );
+  else if (path === "/mentorship/") v = <Mentorship />;
   else if (path === "/mentorship/bring-a-deal/")
     v = (
       <Generic
