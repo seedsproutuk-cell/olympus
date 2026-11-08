@@ -695,7 +695,9 @@ const glossaryEntries=[
   {term:"Title deeds",definition:"Documents and registered information evidencing ownership, boundaries, rights and restrictions. A conveyancer checks the legal title during a purchase.",href:"/learn/first-time-buyers/"},
   {term:"Under offer",definition:"The seller or agent has accepted an offer in principle, but the transaction has not yet exchanged contracts or completed.",href:"/opportunities/homes-for-sale/"}
 ];
-function A(p: { href: string; children: React.ReactNode; className?: string }) {
+function A(
+  p: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string },
+) {
   return <a {...p} />;
 }
 function Header() {
