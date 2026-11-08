@@ -17,6 +17,7 @@ type Page = {
   intro: string;
   sections: Section[];
   form?: string;
+  actions?: [string, string][];
 };
 const P: Record<string, Page> = {
   "/leasing/": {
@@ -98,6 +99,7 @@ const P: Record<string, Page> = {
         ],
       },
     ],
+    actions: [["Offer a property", "/social-care/property/offer-a-property/"],["Find care premises", "/social-care/property/find-a-property/"]],
   },
   "/social-care/property/": {
     title: "Supported Living Property",
@@ -761,6 +763,8 @@ function Footer() {
   );
 }
 function Inner({ p, dark = false }: { p: Page; dark?: boolean }) {
+  const formLabel=p.form?.includes("mentorship")?"Inquire now":p.form?.includes("Property listing")?"List your property":p.form?.includes("inspection")?"Request an inspection":p.form?"Make an enquiry":"";
+  const actions=p.actions||(p.title==="Property Mentorship"?[["Inquire now","#form"]]:p.form?[[formLabel,"#form"]]:[]);
   return (
     <section className={dark ? "inner dark" : "inner"}>
       <div className="crumb">
@@ -772,6 +776,7 @@ function Inner({ p, dark = false }: { p: Page; dark?: boolean }) {
       <span className="kicker">{p.eyebrow}</span>
       <h1>{p.title}</h1>
       <p>{p.intro}</p>
+      {actions.length>0&&<div className="inner-actions">{actions.map((action,i)=><A href={action[1]} className={i===0?"button":"button ghost"} key={action[0]}>{action[0]} <ArrowRight/></A>)}</div>}
     </section>
   );
 }
@@ -788,7 +793,7 @@ function Form({ name, context }: { name: string; context?: string }) {
       </section>
     );
   return (
-    <section className="form">
+    <section className="form" id="form">
       <div>
         <span className="kicker">Start here</span>
         <h2>{name}</h2>
@@ -1010,6 +1015,7 @@ function OperatorProperty({
           eyebrow: `Operator lease · ${listing.ref}`,
           intro: `${listing.area} · ${listing.price}`,
           sections: [],
+          actions: [["Make an enquiry", "#enquire"]],
         }}
       />
       <section className="property-detail">
@@ -1398,6 +1404,7 @@ function OpportunityCategory({
           eyebrow: guide?.eyebrow || "Property opportunities",
           intro: guide?.intro || category.intro,
           sections: [],
+          actions: guide&&category.slug!=="operator-lease"?[["Make an enquiry","#form"]]:undefined,
         }}
       />
       <div className="category-breadcrumbs">
@@ -1469,11 +1476,13 @@ function OpportunityCategory({
 }
 function Mentorship(){return <><Inner p={{title:"Property Mentorship",eyebrow:"One-to-one property guidance",intro:"Build your next property move with practical support shaped by more than 35 years of experience.",sections:[]}}/><section className="mentorship-intro"><div><span className="kicker">From your first property to your fifth</span><h2>Guidance built around the outcome you want.</h2></div><p>Whether you are preparing for your first acquisition or expanding an existing portfolio, the programme helps you build knowledge, assess real opportunities and move forward with a clear plan.</p></section><section className="mentorship-pillars">{[{n:"01",title:"One-to-one guidance",copy:"Work directly with experienced mentors on your goals, strategy, questions and next actions."},{n:"02",title:"Bring live deals",copy:"Review real opportunities, the numbers, risks, funding route, due diligence and negotiation before you decide."},{n:"03",title:"Source opportunities",copy:"Learn practical sourcing methods, including ways to structure and control opportunities without relying only on your own purchase capital."},{n:"04",title:"Acquisition support",copy:"Get guidance through search, analysis, offers, professional checks and the steps towards completing a suitable acquisition."},{n:"05",title:"Professional network",copy:"Understand when to involve solicitors, finance professionals, surveyors and other specialists, and what to ask them."},{n:"06",title:"Works and delivery",copy:"Plan refurbishment or property works with clearer briefs, budgets and access to relevant subcontractor support."}].map(x=><article key={x.n}><span>{x.n}</span><h3>{x.title}</h3><p>{x.copy}</p></article>)}</section><section className="mentorship-commitment"><div><span className="kicker">A holistic programme</span><h2>Knowledge, opportunities and accountable next steps.</h2></div><div><p>The programme is designed to stay close to your real objective—not simply deliver generic lessons. We help you strengthen your understanding, challenge assumptions and work through the practical stages of a property decision.</p><p>Property outcomes and finance are never guaranteed. Every acquisition remains subject to suitable opportunities, funding, professional advice and your own due diligence.</p></div></section><Form name="Join the mentorship programme" context="Property mentorship application"/></>}
 function Generic({ p }: { p: Page }) {
+  const formFirst=p.title==="List Your Property for Sale or to Rent";
   return (
     <>
       <Inner p={p} />
+      {p.form&&formFirst&&<Form name={p.form}/>}
       {p.sections.length > 0 && (
-        <section className="generic">
+        <section className={formFirst?"generic compact-support":"generic"}>
           {p.sections.map((s, i) => (
             <article key={s.title}>
               <span>0{i + 1}</span>
@@ -1490,7 +1499,7 @@ function Generic({ p }: { p: Page }) {
           ))}
         </section>
       )}
-      {p.form && <Form name={p.form} />}
+      {p.form&&!formFirst&&<Form name={p.form}/>}
     </>
   );
 }
