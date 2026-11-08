@@ -180,6 +180,7 @@ const P: Record<string, Page> = {
     sections: [
       {title:"What we investigate",copy:"Visible mould growth, staining, condensation, ventilation, heating patterns, leaks, penetrating moisture and signs of rising damp."},
       {title:"What you receive",copy:"A written record of observations, photographs where appropriate, likely contributing factors and recommended next actions."},
+      {title:"Awaab’s Law and housing duties",copy:"For social housing in England, Awaab’s Law sets timeframes for investigating and addressing significant damp and mould hazards. Other repair and housing-safety duties may also apply depending on the tenancy.",link:["Read official Awaab’s Law guidance","https://www.gov.uk/government/collections/awaabs-law-in-the-social-rented-sector"]},
       {title:"Who it is for",copy:"Landlords, letting agents, housing providers, block managers and occupiers who need a clearer picture of the problem."}
     ],
     form: "Request a damp and mould inspection",
@@ -191,6 +192,7 @@ const P: Record<string, Page> = {
     sections: [
       {title:"What we check",copy:"Door leaf and frame condition, gaps, seals, hinges, closers, glazing, signage and visible damage or alteration."},
       {title:"Inspection record",copy:"Each inspected door is recorded with its location, observed condition and recommended remedial priority."},
+      {title:"Fire-safety legislation",copy:"The Fire Safety Order 2005 requires a suitable fire-risk assessment. For relevant residential buildings over 11 metres, the Fire Safety (England) Regulations 2022 require quarterly communal-door checks and best endeavours to check flat entrance doors annually.",link:["Read official fire-door guidance","https://www.gov.uk/government/publications/fire-safety-england-regulations-2022-fire-door-guidance/fire-safety-england-regulations-2022-fire-door-guidance"]},
       {title:"Scope and limitations",copy:"The agreed scope is confirmed before attendance. An inspection supports—rather than replaces—the responsible person’s wider fire-safety duties."}
     ],
     form: "Request a fire door inspection",
@@ -198,11 +200,11 @@ const P: Record<string, Page> = {
   "/inspections/subcontractors/": {
     title: "Property Subcontractor Services",
     eyebrow: "Delivery support",
-    intro: "Tell us what work is required and we can help identify suitable subcontractors for a clearly defined property project.",
+    intro: "Access trusted trades and specialists backed by long-standing property-delivery experience.",
     sections: [
-      {title:"Trades and specialists",copy:"Support may include repairs, refurbishment, damp remediation, fire-door works, decorating and other defined property services."},
+      {title:"30 years of working relationships",copy:"Our network includes trusted trades and specialists across repairs, refurbishment, damp remediation, fire-door works and related property services."},
       {title:"A clear brief",copy:"We record the property, required work, timescale, access arrangements and available evidence before introductions are made."},
-      {title:"Appointments and responsibility",copy:"Scope, competence, insurance, quotations and contracts must be checked and agreed directly before work begins."}
+      {title:"Quality and due diligence",copy:"We review experience and suitability before an introduction. Final scope, competence, insurance, quotations and contracts are still checked and agreed before work begins."}
     ],
     form: "Subcontractor service enquiry",
   },
@@ -235,16 +237,22 @@ const P: Record<string, Page> = {
       "A calm, practical overview from saving a deposit to collecting the keys.",
     sections: [
       {
-        title: "Get on the property ladder",
-        copy: "Build an affordable budget, save a deposit and allow for legal, survey and moving costs.",
+        title: "Prepare your finances",
+        copy: "Set an affordable monthly budget, build a deposit, review your credit position and allow for legal work, searches, surveys, mortgage fees, tax where applicable and moving costs.",
+        link: ["Browse homes for buyers", "/opportunities/homes-for-sale/"],
       },
       {
-        title: "The steps to buying",
-        copy: "Get a mortgage in principle, search carefully, offer, appoint a conveyancer and complete due diligence.",
+        title: "Search and make an offer",
+        copy: "Define your preferred areas and essentials, compare values, view carefully and make an offer that reflects condition, demand and your budget.",
       },
       {
-        title: "Costs of buying",
-        copy: "Budget beyond the deposit for legal work, searches, surveys, mortgage costs and moving.",
+        title: "From offer to completion",
+        copy: "Appoint a conveyancer, arrange a suitable survey and mortgage, review title and searches, exchange only when ready, then complete and collect the keys.",
+        link: ["Use the property glossary", "/glossary/"],
+      },
+      {
+        title: "Keep a safety margin",
+        copy: "A lender’s maximum is not necessarily a comfortable budget. Allow for repairs, insurance, service charges, maintenance and changes in interest rates.",
       },
     ],
   },
@@ -256,15 +264,23 @@ const P: Record<string, Page> = {
     sections: [
       {
         title: "Buy-to-let",
-        copy: "Own a property and earn rent, while carrying finance, repairs, void and compliance risk.",
+        copy: "Purchase a home and receive rent while carrying finance, repairs, void periods, management, tax and compliance responsibilities.",
+        link: ["See investment opportunities", "/opportunities/investment/"],
       },
       {
-        title: "Rent to rent",
-        copy: "Control property under contract without owning it. Permissions, margins and delivery are critical.",
+        title: "Operator leases",
+        copy: "Control a property under an agreed lease. The margin depends on rent, permitted use, occupancy, operating costs and effective delivery.",
+        link: ["Explore operator leases", "/opportunities/operator-lease/"],
       },
       {
-        title: "Commercial and supported living",
-        copy: "Specialist uses with detailed due diligence and lease terms.",
+        title: "Commercial property",
+        copy: "Commercial income can offer longer terms, but lease structure, repairing obligations, business demand, VAT and exit liquidity require careful review.",
+        link: ["Browse commercial opportunities", "/opportunities/commercial/"],
+      },
+      {
+        title: "Supported living and care premises",
+        copy: "A defined care or housing use requires provider suitability, demand, planning, registration, building compliance and clear lease terms.",
+        link: ["Explore social care property", "/social-care/property/"],
       },
     ],
   },
@@ -275,16 +291,24 @@ const P: Record<string, Page> = {
       "Illustrative cases that make assumptions, risks and decision points visible.",
     sections: [
       {
-        title: "Residential deals",
-        copy: "Price, finance, works, rent, running costs and exit assumptions reviewed together.",
+        title: "Residential purchase",
+        copy: "Review price, deposit, finance, acquisition costs, works, rent, running costs, voids, maintenance and resale assumptions together.",
+        link: ["View residential opportunities", "/opportunities/residential/"],
       },
       {
-        title: "Operator lease deals",
-        copy: "Rent, setup cost, occupancy, operating costs and downside scenarios tested.",
+        title: "Operator lease",
+        copy: "Test the head rent, setup cost, permitted use, achievable income, occupancy, staffing, utilities, compliance, break clauses and downside scenario.",
+        link: ["View operator leases", "/opportunities/operator-lease/"],
       },
       {
-        title: "How we analyse",
-        copy: "We separate known facts from advertiser figures and estimates.",
+        title: "Investment evidence",
+        copy: "Separate verified facts from advertiser figures and estimates. Stress-test interest rates, works, income and exit timing.",
+        link: ["Explore investments", "/opportunities/investment/"],
+      },
+      {
+        title: "Bring a live deal",
+        copy: "Identify missing evidence, challenge assumptions and decide what must be checked before proceeding.",
+        link: ["Bring a deal to mentorship", "/mentorship/bring-a-deal/"],
       },
     ],
   },
@@ -335,7 +359,7 @@ const P: Record<string, Page> = {
     title: "List Your Property for Sale or to Rent",
     eyebrow: "Owners, landlords and agents",
     intro:
-      "Advertise a home, rental, lease opportunity or commercial property. Every submission is approved.",
+      "Advertise a home, rental, lease opportunity or commercial property.",
     sections: [
       {
         title: "What you can list",
@@ -649,27 +673,27 @@ const opportunityCategories = [
       "Commercial premises available to buyers, owner-occupiers and investors.",
   },
 ];
-const terms = [
-  "BMV",
-  "Break clause",
-  "Change of use",
-  "Completion date",
-  "Dilapidations",
-  "Exchange of contracts",
-  "Exempt accommodation",
-  "FRI lease",
-  "Gazumping",
-  "Ground rent",
-  "Heads of terms",
-  "Leasehold vs freehold",
-  "Property chain",
-  "Refurbishment",
-  "Rental yield",
-  "Service charge",
-  "Sold STC",
-  "Supported living",
-  "Title deeds",
-  "Under offer",
+const glossaryEntries=[
+  {term:"BMV",definition:"Below market value: a price claimed to be lower than comparable market evidence. Verify the valuation, condition, restrictions and reason for the discount.",href:"/learn/deal-breakdowns/"},
+  {term:"Break clause",definition:"A lease term allowing one or both parties to end the lease early if notice, dates and stated conditions are followed.",href:"/leasing/"},
+  {term:"Change of use",definition:"A planning change from one lawful property use to another. Permission may be required even when the physical building remains unchanged.",href:"/social-care/property/"},
+  {term:"Completion date",definition:"The agreed date when purchase money is transferred, legal ownership changes and the buyer normally receives the keys.",href:"/learn/first-time-buyers/"},
+  {term:"Dilapidations",definition:"A commercial-lease claim concerning repair, reinstatement or decoration obligations that the tenant has not satisfied.",href:"/opportunities/commercial/"},
+  {term:"Exchange of contracts",definition:"The stage when signed sale contracts are exchanged and the transaction normally becomes legally binding, subject to their terms.",href:"/learn/first-time-buyers/"},
+  {term:"Exempt accommodation",definition:"Certain supported housing where care, support or supervision is provided and different Housing Benefit rules may apply. Specialist advice is essential.",href:"/social-care/property/"},
+  {term:"FRI lease",definition:"A full repairing and insuring lease, commonly requiring the commercial tenant to repair the premises and meet insurance costs directly or through the landlord.",href:"/opportunities/commercial/"},
+  {term:"Gazumping",definition:"When a seller accepts a higher or preferable offer from another buyer before contracts have been exchanged.",href:"/learn/first-time-buyers/"},
+  {term:"Ground rent",definition:"A periodic payment that some leaseholders must make under their lease. Check the amount, review provisions and current legal restrictions.",href:"/learn/first-time-buyers/"},
+  {term:"Heads of terms",definition:"A summary of the main commercial points proposed for a lease or transaction. It is usually subject to contract and legal documentation.",href:"/leasing/"},
+  {term:"Leasehold vs freehold",definition:"Freehold normally means owning the building and land indefinitely. Leasehold means owning a time-limited interest subject to the lease and possible charges.",href:"/learn/first-time-buyers/"},
+  {term:"Property chain",definition:"Linked purchases and sales in which one completion depends on another. Longer chains can create additional timing and failure risk.",href:"/learn/first-time-buyers/"},
+  {term:"Refurbishment",definition:"Works intended to repair, modernise or reconfigure a property. Budget for surveys, permissions, contingency, finance and holding costs.",href:"/learn/deal-breakdowns/"},
+  {term:"Rental yield",definition:"Annual rent divided by property value or purchase price, expressed as a percentage. Gross yield excludes finance, voids, repairs and running costs.",href:"/learn/property-income/"},
+  {term:"Service charge",definition:"A payment towards shared services, maintenance, management or insurance. Review accounts, planned major works and the lease before buying.",href:"/learn/first-time-buyers/"},
+  {term:"Sold STC",definition:"Sold subject to contract: an offer has been accepted, but contracts have not been exchanged and the sale is not yet legally complete.",href:"/opportunities/homes-for-sale/"},
+  {term:"Supported living",definition:"Housing provided alongside support that helps a person live more independently. Property, care, funding, planning and provider requirements must be considered separately.",href:"/social-care/property/"},
+  {term:"Title deeds",definition:"Documents and registered information evidencing ownership, boundaries, rights and restrictions. A conveyancer checks the legal title during a purchase.",href:"/learn/first-time-buyers/"},
+  {term:"Under offer",definition:"The seller or agent has accepted an offer in principle, but the transaction has not yet exchanged contracts or completed.",href:"/opportunities/homes-for-sale/"}
 ];
 function A(p: { href: string; children: React.ReactNode; className?: string }) {
   return <a {...p} />;
@@ -821,6 +845,10 @@ function Form({ name, context }: { name: string; context?: string }) {
           Phone
           <input />
         </label>
+        {name==="Owner lease offer"&&<><label>Property address *<input required placeholder="Address and postcode"/></label><label>Property type *<input required placeholder="House, HMO, flat, commercial"/></label><label>Bedrooms / approximate size<input placeholder="Bedrooms or floor area"/></label><label>Current occupancy<select defaultValue=""><option value="">Select</option><option>Vacant</option><option>Owner occupied</option><option>Tenanted</option></select></label><label>Proposed monthly rent<input placeholder="If known"/></label><label>Preferred lease term<input placeholder="For example, 3–5 years"/></label><label className="wide">What uses would you consider? *<textarea required rows={3} placeholder="HMO, supported housing, serviced accommodation or other permitted use"/></label><label className="wide">Planning, licence, lender and insurance position<textarea rows={3} placeholder="Tell us what has been confirmed and what remains to be checked"/></label></>}
+        {name==="Operator requirement"&&<><label>Organisation name *<input required/></label><label>Operating model *<select required defaultValue=""><option value="" disabled>Select</option><option>HMO</option><option>Supported housing</option><option>Serviced accommodation</option><option>Corporate let</option><option>Other</option></select></label><label>Preferred locations *<input required/></label><label>Maximum monthly rent *<input required/></label><label>Bedrooms / capacity required<input/></label><label>Preferred lease term<input/></label><label className="wide">Experience and current portfolio *<textarea required rows={3}/></label><label className="wide">Property requirements and intended use *<textarea required rows={4}/></label></>}
+        {name==="Care premises offer"&&<><label>Property address *<input required placeholder="Address and postcode"/></label><label>Your relationship to the property *<select required defaultValue=""><option value="" disabled>Select</option><option>Owner</option><option>Landlord</option><option>Authorised agent</option></select></label><label>Property type *<input required/></label><label>Bedrooms / capacity<input/></label><label>Accessibility features<textarea rows={3} placeholder="Level access, lift, adapted bathrooms, parking or other features"/></label><label>Availability and proposed terms<textarea rows={3}/></label><label className="wide">Planning, registration, licence and compliance status *<textarea required rows={4} placeholder="State what is confirmed, pending or unknown"/></label></>}
+        {name==="Care premises requirement"&&<><label>Organisation name *<input required/></label><label>Service or care model *<input required placeholder="Supported living, children’s home, residential care or other"/></label><label>Registration status<select required defaultValue=""><option value="" disabled>Select</option><option>Registered</option><option>Application in progress</option><option>Not yet required / seeking advice</option></select></label><label>Preferred areas *<input required/></label><label>Required capacity / bedrooms *<input required/></label><label>Maximum budget *<input required/></label><label>Required by *<input type="date"/></label><label>Preferred lease term<input/></label><label className="wide">Layout, accessibility and location requirements *<textarea required rows={4}/></label><label className="wide">Decision process and funding position<textarea rows={3}/></label></>}
         <label>
           Enquiry type *
           <select required defaultValue={context || ""}>
@@ -1150,6 +1178,7 @@ function Grid({
     </section>
   );
 }
+function InvestmentComingSoon(){return <section className="investment-soon"><span className="kicker">Investment opportunities</span><h2>Soon to come.</h2><p>Property investment brings people and capital together to acquire or control property with an agreed strategy. Opportunities may include buy-to-let, refurbishment, joint purchases and lease-led income structures. Each opportunity will set out its structure, assumptions and key risks before enquiries are invited.</p><A href="#form" className="button">Make an investment enquiry <ArrowRight/></A></section>}
 function News({
   headline = "Join the Olympus Property Network",
 }: {
@@ -1291,10 +1320,10 @@ function Home() {
       </section>
       <section className="routes">
         {[
-          ["I want to buy or rent", "/opportunities/"],
-          ["I own a property", "/list-a-property/"],
+          ["I want to buy or rent", "/opportunities/residential/"],
+          ["I want to sell or rent out", "/list-a-property/"],
           ["I operate property", "/leasing/find-a-property/"],
-          ["I need premises", "/social-care/property/find-a-property/"],
+          ["Property glossary", "/glossary/"],
         ].map((x) => (
           <A href={x[1]} key={x[1]}>
             {x[0]}
@@ -1344,7 +1373,6 @@ function Home() {
         <div>
           <span className="kicker">Have a property to advertise?</span>
           <h2>Put it in front of the right people.</h2>
-          <p>We review every submission before it goes live.</p>
         </div>
         <A href="/list-a-property/" className="button cream">
           List your property <ArrowRight />
@@ -1415,7 +1443,9 @@ function OpportunityCategory({
         <span>/</span>
         <strong>{category.title}</strong>
       </div>
-      {category.slug === "operator-lease" ? (
+      {category.slug === "investment" ? (
+        <InvestmentComingSoon />
+      ) : category.slug === "operator-lease" ? (
         <OperatorLeaseListings />
       ) : (
         <Grid
@@ -1424,7 +1454,7 @@ function OpportunityCategory({
           showCategories={false}
         />
       )}
-      {guide && (
+      {guide && category.slug !== "investment" && (
         <section className="opportunity-guide compact">
           <div className="opportunity-guide-intro">
             <span className="kicker">How it works</span>
@@ -1444,7 +1474,7 @@ function OpportunityCategory({
       {guide && category.slug !== "operator-lease" && (
         <Form name={guide.form} context={category.title} />
       )}
-      <section className="category-directory">
+      {category.slug !== "investment" && <section className="category-directory">
         <span className="kicker">Continue browsing</span>
         <h2>Related opportunity pages</h2>
         <div>
@@ -1455,7 +1485,7 @@ function OpportunityCategory({
             </A>
           ))}
         </div>
-      </section>
+      </section>}
       {!guide && (
         <section className="category-action">
           <div>
@@ -1528,20 +1558,15 @@ function Glossary() {
         />
       </label>
       <section className="term-list">
-        {terms
-          .filter((x) => x.toLowerCase().includes(q.toLowerCase()))
+        {glossaryEntries
+          .filter((x) => `${x.term} ${x.definition}`.toLowerCase().includes(q.toLowerCase()))
           .map((x) => (
-            <article key={x}>
-              <span>{x[0]}</span>
+            <article key={x.term}>
+              <span>{x.term[0]}</span>
               <div>
-                <h2>{x}</h2>
-                <p>
-                  {x === "Sold STC"
-                    ? "Sold subject to contract. An offer is accepted, but the legal sale has not completed."
-                    : x === "Rental yield"
-                      ? "Annual rent expressed as a percentage of property value or purchase price."
-                      : `${x} is a property term whose exact effect depends on the contract and circumstances. Check the underlying documents.`}
-                </p>
+                <h2>{x.term}</h2>
+                <p>{x.definition}</p>
+                <A href={x.href} className="arrow">Read the related guide <ArrowRight/></A>
               </div>
             </article>
           ))}
