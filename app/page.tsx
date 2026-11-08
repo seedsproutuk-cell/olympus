@@ -794,12 +794,13 @@ function Inner({ p, dark = false }: { p: Page; dark?: boolean }) {
   const actions=p.actions||(p.title==="Property Mentorship"?[["Inquire now","#form"]]:p.form?[[formLabel,"#form"]]:[]);
   return (
     <section className={dark ? "inner dark" : "inner"}>
-      <div className="crumb">
+      <nav className="crumb" aria-label="Breadcrumb">
         <A href="/">
           <HomeIcon /> Home
-        </A>{" "}
-        / {p.title}
-      </div>
+        </A>
+        <span className="crumb-separator" aria-hidden="true">/</span>
+        <span className="crumb-current" aria-current="page">{p.title}</span>
+      </nav>
       <span className="kicker">{p.eyebrow}</span>
       <h1>{p.title}</h1>
       <p>{p.intro}</p>
