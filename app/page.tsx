@@ -402,15 +402,15 @@ const opportunityGuides: Record<
     sections: [
       {
         title: "What an operator lease entails",
-        copy: "An operator takes a property under an agreed lease and manages its day-to-day use. The agreement should make rent, permitted use, repairs, compliance, insurance, access and the lease term clear.",
+        copy: "The lease defines rent, permitted use, repairs, compliance, insurance and term.",
       },
       {
         title: "How Olympus can help",
-        copy: "Operators can register their model, preferred locations, budget, capacity and property requirements. Landlords can submit a property and the terms they are prepared to consider.",
+        copy: "Operators submit their brief; landlords submit suitable properties and proposed terms.",
       },
       {
         title: "Before a match proceeds",
-        copy: "Both parties should verify permissions, planning position, lender and insurer requirements, experience, financial standing and the proposed lease. A match is an introduction, not a guarantee.",
+        copy: "Both parties verify permissions, planning, insurance, experience and lease terms before proceeding.",
       },
     ],
     form: "Operator lease opportunity enquiry",
@@ -423,15 +423,15 @@ const opportunityGuides: Record<
     sections: [
       {
         title: "Your buying brief",
-        copy: "Tell us your preferred areas, budget, property type, number of bedrooms, timescale and any non-negotiable requirements.",
+        copy: "Share your preferred areas, budget, property type, bedrooms and timescale.",
       },
       {
         title: "Property sourcing",
-        copy: "We look across suitable advertised and introduced opportunities, then share relevant properties for you to assess. You remain in control of viewings, offers and professional advice.",
+        copy: "We identify relevant opportunities for you to assess, view and investigate.",
       },
       {
         title: "From search to purchase",
-        copy: "When a property looks suitable, arrange finance, surveys, legal checks and independent due diligence before committing. Availability and asking prices can change.",
+        copy: "Arrange finance, surveys and legal checks before making a commitment.",
       },
     ],
     form: "Home buyer and property sourcing enquiry",
@@ -444,15 +444,15 @@ const opportunityGuides: Record<
     sections: [
       {
         title: "What to include",
-        copy: "Share the areas you will consider, monthly budget, bedrooms, household size, employment or affordability position, preferred move date and length of tenancy.",
+        copy: "Share your areas, monthly budget, bedrooms, household size and move date.",
       },
       {
         title: "How rental sourcing works",
-        copy: "We record your requirements and direct you to suitable available listings or new rental opportunities as they are introduced.",
+        copy: "We match your brief to suitable available and newly introduced rentals.",
       },
       {
         title: "Getting ready to rent",
-        copy: "Be prepared to confirm identity, right to rent, affordability and references where required. Deposits, holding deposits and tenancy terms should always be documented.",
+        copy: "Prepare your identity, right-to-rent, affordability and reference documents.",
       },
     ],
     form: "Residential rental opportunity enquiry",
@@ -465,15 +465,15 @@ const opportunityGuides: Record<
     sections: [
       {
         title: "Opportunities we may feature",
-        copy: "These can include buy-to-let homes, refurbishment projects, lease-led income opportunities and other residential investments where the structure can be explained clearly.",
+        copy: "Browse buy-to-let, refurbishment and lease-led residential opportunities.",
       },
       {
         title: "What we show",
-        copy: "Where information is available, we separate purchase price, expected income, works, running costs, finance assumptions, occupancy and exit considerations so the basis of the opportunity is visible.",
+        copy: "Review price, income, works, running costs, assumptions and exit considerations.",
       },
       {
         title: "Your due diligence",
-        copy: "Returns are not guaranteed. Investors should verify title, condition, demand, valuations, finance, tax, compliance, leases and all figures with appropriately qualified advisers before proceeding.",
+        copy: "Verify the title, condition, demand, finance, tax, compliance and figures independently.",
       },
     ],
     form: "Residential investment opportunity enquiry",
@@ -1370,11 +1370,20 @@ function OpportunityCategory({
         <span>/</span>
         <strong>{category.title}</strong>
       </div>
+      {category.slug === "operator-lease" ? (
+        <OperatorLeaseListings />
+      ) : (
+        <Grid
+          title={`Current ${category.title.toLowerCase()}`}
+          items={items}
+          showCategories={false}
+        />
+      )}
       {guide && (
-        <section className="opportunity-guide">
+        <section className="opportunity-guide compact">
           <div className="opportunity-guide-intro">
             <span className="kicker">How it works</span>
-            <h2>{guide.heading}</h2>
+            <h2>A simple route from requirement to enquiry.</h2>
           </div>
           <div className="opportunity-guide-grid">
             {guide.sections.map((section, i) => (
@@ -1387,15 +1396,6 @@ function OpportunityCategory({
           </div>
         </section>
       )}
-      {category.slug === "operator-lease" ? (
-        <OperatorLeaseListings />
-      ) : (
-        <Grid
-          title={`Current ${category.title.toLowerCase()}`}
-          items={items}
-          showCategories={false}
-        />
-      )}{" "}
       {guide && category.slug !== "operator-lease" && (
         <Form name={guide.form} context={category.title} />
       )}
