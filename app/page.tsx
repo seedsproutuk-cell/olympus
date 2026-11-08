@@ -758,6 +758,7 @@ function Footer() {
           <A href="/terms/">Terms</A> ·{" "}
           <A href="/accessibility/">Accessibility</A>
         </span>
+        <span className="site-credit">Built by <a href="https://theseedsprout.com" target="_blank" rel="noreferrer">SeedSprout</a></span>
       </div>
     </footer>
   );
